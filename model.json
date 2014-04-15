@@ -15,10 +15,10 @@ Player
 Survivor
 {
 	background : Background,
-	energy : energy,
-	health : health,
-	gear : [Gear],
-	infection : Infection,
+	energy : 2,
+	health : 4,
+	loot : [Loot],
+	infection : [InfectionToken],
 	bleeding : false,
 }
 
@@ -28,20 +28,23 @@ Background
 	history : "Chemist",
 	energy : 4,
 	health : 4,
-	gear : [Gear],
+	loot : [Loot],
 	special: "Mr. White gains +1 power when attacking special zombies."
 }
 
-Gear
+Loot
 {
-	name : "Crowbar",
-	type : "close weapon",
-	size : "1 hand",
-	power : 2,
+	name : "Chainsaw",
+	type : "CLOSE_WEAPON",
+	size : "TWO_HANDS",
+	power : 4,
 	energy : 1,
-	noisy : false,
-	ammo : n/a,
-	special : "Action+Energy: Break down adjacent door"
+	noisy : true,
+	ammo : 3,
+	special : [
+		"Action+Energy+Ammo+Noisy: Break down adjacent door",
+		"On miss: Holder, or adjacent survivor loses one health" 
+	]
 }
 
 Role
@@ -50,4 +53,25 @@ Role
 	survivor : "SURVIVOR"
 }
 
+InfectionToken
+{
+	geniune : true
+}
 
+LootType
+{
+	closeWeapon : "CLOSE_WEAPON",
+	rangeWeapon : "RANGE_WEAPON",
+	armour : "ARMOUR",
+	consumable : "CONSUMABLE",
+	bag : "BAG",
+	tool : "TOOL"
+}
+
+LootSize
+{
+	oneHand : "ONE_HAND",
+	twoHands : "TWO_HANDS",
+	pocket : "POCKET",
+	worn : "WORN"
+}
