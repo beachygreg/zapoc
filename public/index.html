@@ -2,20 +2,37 @@
 <html>
   <head>
     <title>Zapoc - A zombie board game</title>
-    <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/static/bower_components/angular/angular-csp.css">
-    <link rel="stylesheet" href="/static/bower_components/angular-ui/build/angular-ui.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/bower_components/angular/angular-csp.css">
+    <link rel="stylesheet" href="/bower_components/angular-ui/build/angular-ui.min.css">
 
-    <script href="/static/bower_components/jquery/dist/jquery.min.js"></script>
-    <script href="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script href="/static/bower_components/angular/angular.min.js"></script>
-    <script href="/static/bower_components/angular-ui/build/angular-ui.min.js"></script>
-    <script href="/static/bower_components/angular-ui/build/angular-ui-ieshiv.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui/build/angular-ui.min.js"></script>
+    <script src="/bower_components/angular-ui/build/angular-ui-ieshiv.min.js"></script>
 
-    <script href="/socket.io/socket.io.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect('/');
+    </script>
   </head>
-  <body>
-    <h1 class="text-center">Welcome to Zapoc</h1>
+  <body ng-app>
+    <div class="container" ng-controller="ZapocCtrl">
+      <h1 class="text-center">Welcome to Zapoc</h1>
+      <form class="form" ng-submit="start()">
+        <label for="nickname">Nickname:</label>
+        <input type="text" ng-model="nickname">
+        <button ui-button type="submit">Start</button>
+      </form>
+    </div>
+    <script>
+      function ZapocCtrl($scope) {
+        $scope.start = function() {
+          socket.emit('start', { nickname: $scope.nickname });
+        };
+      }
+    </script>
   </body>
 </html>

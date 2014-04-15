@@ -1,9 +1,9 @@
 {
   "name": "zapoc",
   "version": "0.0.1",
-  "repository": "https://github.com/beachygreg/esl.zapoc.git",
+  "repository": "https://github.com/beachygreg/zapoc.git",
   "dependencies": {
-    "express": "4.0.0",
+    "express": "~3.5",
     "socket.io": "0.9.16"
   }
 }
