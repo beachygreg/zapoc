@@ -2,7 +2,7 @@ Game
 {
 	name : "How I Met Your Mother",
 	players : [Player],
-	board: [TilePosition],
+	board: [RoomPosition],
 	survivors : [Survivor],
 }
 
@@ -74,4 +74,55 @@ LootSize
 	twoHands : "TWO_HANDS",
 	pocket : "POCKET",
 	worn : "WORN"
+}
+
+RoomPosition
+{
+	row: 2,
+	column: 5,
+	room: Room
+}
+
+Room
+{
+	explored: true,
+	loot: [Loot],
+	looted: 2,
+	effects: [RoomEffect],
+	doorways: [Direction->Doorway],
+	floorTiles: [5][5]
+}
+
+FloorTile
+{
+	canMoveThrough : true
+	occupant : Survivor | Zombie
+}
+
+RoomEffect
+{
+	horrorShow : "HORROR_SHOW",
+	dark : "DARK",
+	fire : "FIRE"
+}
+
+Doorway
+{
+	door : Door,
+	direction : Direction,
+}
+
+Door
+{
+	brokenDown : false,
+	closed : false,
+	toughness : 4
+}
+
+Direction
+{
+	north : "NORTH",
+	south : "SOUTH",
+	east : "EAST",
+	west : "WEST"
 }
