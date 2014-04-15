@@ -1,0 +1,49 @@
+Game
+{
+	name : "How I Met Your Mother",
+	players : [Player],
+	board: [TilePosition],
+	survivors : [Survivor],
+}
+
+Player
+{
+	name : "Q-Dawg",
+	role : "Zombie Master"
+}
+
+Survivor
+{
+	background : Background,
+	energy : energy,
+	health : health,
+	gear : [Gear],
+	infection : Infection,
+	bleeding : false,
+}
+
+Background
+{
+	name : "Mr. White",
+	history : "Chemist",
+	energy : 4,
+	health : 4,
+	gear : [Gear],
+	special: "Mr. White gains +1 power when attacking special zombies."
+}
+
+Gear
+{
+	name : "Crowbar",
+	type : "close weapon",
+	size : "1 hand",
+	power : 2,
+	energy : 1,
+	noisy : false,
+	ammo : n/a,
+	special : "Action+Energy: Break down adjacent door"
+}
+
+
+
+
