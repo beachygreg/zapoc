@@ -11,7 +11,7 @@ zapocApp.config(['$routeProvider',
 //        controller: 'LoginController'
 //      })
       .otherwise({
-        templateUrl: 'views/main.html',
+        templateUrl: 'app/views/main.html',
         controller: 'MainController'
       });
   }]);
