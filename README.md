@@ -1,4 +1,4 @@
-esl.zapoc
+zapoc
 =========
 
 A zombie board game
