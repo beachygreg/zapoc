@@ -7,11 +7,6 @@ var app = express();
 var server = http.createServer(app);
 var ws = socketio.listen(server);
 
-
-app.use('/', express.static(__dirname + '/public'));
-
-app.get('/', function(req, res) {
-  res.sendfile('public/index.html');
-});
+app.use(express.static(__dirname + '/public'));
 
 app.listen(4000);
