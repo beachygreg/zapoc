@@ -9,7 +9,7 @@ Game
 Player
 {
 	name : "Q-Dawg",
-	role : "Zombie Master"
+	role : "ZOMBIE_MASTER"
 }
 
 Survivor
@@ -44,6 +44,10 @@ Gear
 	special : "Action+Energy: Break down adjacent door"
 }
 
-
+Role
+{
+	zombieMaster : "ZOMBIE_MASTER",
+	survivor : "SURVIVOR"
+}
 
 
