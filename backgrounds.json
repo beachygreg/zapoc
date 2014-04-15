@@ -1,0 +1,138 @@
+[
+  {
+    name : "Dr. Farthington",
+    job : "Big Game Hunter",
+    health : 4,
+    energy : 4,
+    gear : [Crossbow, Jerky],
+    special : "When spending Bow or Crossbow ammo, roll D: 1-3: no effect; 4-6 recover ammo."
+  },
+  {
+    name : "Cash",
+    job : "Drug Dealer",
+    health : 4,
+    energy : 4,
+    gear : [Gym Bag, Amphetamines, Magic Mushroom, Adrenaline Shot],
+    special : ""
+  },
+  {
+    name : "Buck",
+    job : "Police Officer",
+    health : 5,
+    energy : 3,
+    gear : [Holster, Pistol, Flashlight],
+    special : "May fire pistol or revolver without removing it from his holster."
+  },
+  {
+    name : "Chris",
+    job : "Fireman",
+    health : 4,
+    energy : 3,
+    gear : [Fireaxe, Fire-Proof Suit],
+    special : ""
+  },
+  {
+    name : "Cindy",
+    job : "Veteranarian",
+    health : 5,
+    energy : 4,
+    gear : [Morphine, Bandages],
+    special : "Action+Energy: Roll D: 1-3 no effect; 4-6 remove 1 infection token from self or adjacent survivor."
+  },
+  {
+    name : "James",
+    job : "Metalhead",
+    health : 5,
+    energy : 4,
+    gear : [Guitar],
+    special : ""
+  },
+  {
+    name : "Joe",
+    job : "Private Eye",
+    health : 5,
+    energy : 3,
+    gear : [Flashlight, Vodka],
+    special : "Energy: Reroll one D while looting.  Once per looting action."
+  },
+  {
+    name : "Sister Elisabeth",
+    job : "Nun",
+    health : 4,
+    energy : 3,
+    gear : [],
+    special : "Whenever dealt an infection token, roll D: 1-3 keep token; 4-6 discard token."
+  },
+  {
+    name : "Ziggy",
+    job : "Pro Wrestler",
+    health : 5,
+    energy : 5,
+    gear : [Adrenaline Shot],
+    special : "Action+Energy+Energy: Attack adjacent target with 2 power."
+  },
+  {
+    name : "Mr. White",
+    job : "Chemist",
+    health : 4,
+    energy : 4,
+    gear : [Molotov Cocktail],
+    special : "+1 power when attacking special zombies."
+  },
+  {
+    name : "Jessie",
+    job : "Burglar",
+    health : 4,
+    energy : 3,
+    gear : [Knife, Backpack],
+    special : "Unaffected by darkness."
+  },
+  {
+    name : "Danny",
+    job : "Cook",
+    health : 5,
+    energy : 4,
+    gear : [Cleaver, Lunch Box, Apron],
+    special : ""
+  },
+  {
+    name : "Shelly",
+    job : "Cheerleader",
+    health : 4,
+    energy : 4,
+    gear : [Backpack],
+    special : "Taking a second action during an activation does not cost Shelly energy."
+  },
+  {
+    name : "Hobbes",
+    job : "Hobo",
+    health : 3,
+    energy : 4,
+    gear : [Vodka],
+    special : "Hobbes is not dealt infection tokens during the spread infection phase."
+  },
+  {
+    name : "Franky",
+    job : "Rugby Player",
+    health : 5,
+    energy : 5,
+    gear : [Gym Bag],
+    special : "Close attacks against other survivors knock them prone if missed."
+  },
+  {
+    name : "Billy",
+    job : "Redneck",
+    health : 4,
+    energy : 3,
+    gear : [Pitchfork, Shotgun],
+    special : "+1 power when attacking other survivors."
+  },
+  {
+    name : "Mark",
+    job : "Paramedic",
+    health : 4,
+    energy : 4,
+    gear : [First Aid Kit],
+    special : "May reroll after using First Aid Kit"
+  }
+}
