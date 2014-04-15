@@ -10,12 +10,6 @@
     <script src="/bower_components/angular/angular.js"></script>
 </head>
 <body>
-<h1>hello</h1>
-
-<div class="container" role="main">
-    <div ng-view></div>
-</div>
-
 <span ng-cloak>
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -27,9 +21,12 @@
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/app/scripts/app.js"></script>
+    <script src="/app/board/BoardController.js"></script>
     <script src="/app/scripts/main-controller.js"></script>
     <script src="/app/scripts/sockets/socket-service.js"></script>
 </span>
-
+<div class="container" role="main">
+    <div ng-view></div>
+</div>
 </body>
 </html>
