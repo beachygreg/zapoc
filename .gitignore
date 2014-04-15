@@ -2,3 +2,4 @@
 idea/
 .idea/
 /public/bower_components
+node_modules/
