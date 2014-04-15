@@ -126,3 +126,12 @@ Direction
 	east : "EAST",
 	west : "WEST"
 }
+
+Zombie
+{
+	name : "Walker",
+	speed : 3,
+	power : 1,
+	toughness : 4,
+	special : null
+}
