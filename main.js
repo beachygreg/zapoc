@@ -9,4 +9,7 @@ var ws = socketio.listen(server);
 
 app.use(express.static(__dirname + '/public'));
 
+
+
+
 server.listen(4000);
