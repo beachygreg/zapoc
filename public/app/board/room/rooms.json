@@ -1,0 +1,10 @@
+[
+    {
+        "name": "room1",
+        "tiles": "roomstiles"
+    },
+    {
+        "name": "room2",
+        "tiles": "roomstiles"
+    }
+]
