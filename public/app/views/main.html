@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="ChatController">
 
     <!--this is the players actions window-->
     <div class="col-md-2">
@@ -27,13 +27,22 @@
             </div>
         </div>
 
-        <!--this is the chat windows-->
-        <div class="row">
+        <!--this is the chat window-->
+        <div class="row" style="max-height: 20%;">
             <div class="col-md-12">
                 <div class="panel panel-default">
-
                     <div class="panel-body">
-                        chat
+                        <div ng-repeat="msg in messages">
+                          <span ng-show="!msg.system">
+                            <span style="color: red;" ng-bind="msg.nickName"></span>:
+                            <span style="color: blue;" ng-bind="msg.message"></span>
+                          </span>
+                          <span ng-show="msg.system" style="color: green;">{{msg.nickName || 'server:'}} {{msg.message}}</span>
+                        </div>
+                        <input ng-show="!chatConnected" type="text" ng-model="nickName" placeholder="Nickname" ng-keypress="onEnter($event, connectChat)">
+                        <button ng-show="!chatConnected" type="button" ng-click="connectChat()">Connect</button>
+                        <input ng-show="chatConnected" type="text" ng-model="chatText" ng-keypress="onEnter($event, sendChatMessage)" style="width: 80%;">
+                        <button ng-show="chatConnected" type="button" ng-click="disconnectChat()" style="width: 18%;">Disconnect</button>
                     </div>
                 </div>
             </div>
@@ -45,10 +54,10 @@
     <div class="col-md-2">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Other player</h3>
+                <h3 class="panel-title">All Players</h3>
             </div>
             <div class="panel-body">
-                their stuff
+                <div ng-repeat="player in players">{{ player }}</div>
             </div>
         </div>
     </div>

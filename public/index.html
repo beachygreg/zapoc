@@ -1,6 +1,7 @@
-<!doctype html>
-<html ng-app="zapocApp">
+<!DOCTYPE html>
+<html lang="en" ng-app="zapocApp">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zapoc - A zombie board game</title>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -18,14 +19,16 @@
     <script src="/bower_components/angular-ui/build/angular-ui-ieshiv.min.js"></script>
     <script src="/bower_components/angular-bootstrap/ui-bootstrap.js"></script>
     <script src="/bower_components/angular-socket-io/socket.js"></script>
+    <script src="/bower_components/angular-local-storage/angular-local-storage.js"></script>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/app/scripts/app.js"></script>
     <script src="/app/board/BoardController.js"></script>
     <script src="/app/scripts/main-controller.js"></script>
+    <script src="/app/scripts/chat-controller.js"></script>
     <script src="/app/scripts/sockets/socket-service.js"></script>
 </span>
-<div class="container" role="main">
+<div class="container-fluid" role="main">
     <div ng-view></div>
 </div>
 </body>
