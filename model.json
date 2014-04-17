@@ -9,7 +9,8 @@ Game
 Player
 {
 	name : "Q-Dawg",
-	role : "ZOMBIE_MASTER"
+	role : "ZOMBIE_MASTER",
+	survior: [Survivor]
 }
 
 Survivor
@@ -89,7 +90,7 @@ Room
 	loot: [Loot],
 	looted: 2,
 	effects: [RoomEffect],
-	doorways: [Direction->Doorway],
+	doorways: {Direction->Doorway},
 	floorTiles: [5][5]
 }
 
