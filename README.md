@@ -2,7 +2,7 @@ zapoc
 =========
 
 A zombie board game
-
+`
 Game
 {
 	name : "How I Met Your Mother",
@@ -141,5 +141,5 @@ Zombie
 	toughness : 4,
 	special : null
 }
-
+`
 
