@@ -3,7 +3,6 @@ zapoc
 
 A zombie board game
 
-`
 Game
 {
 	name : "How I Met Your Mother",
@@ -143,4 +142,4 @@ Zombie
 	special : null
 }
 
-`
+
