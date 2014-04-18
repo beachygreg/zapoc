@@ -51,7 +51,9 @@ Loot
 Role
 {
 	zombieMaster : "ZOMBIE_MASTER",
-	survivor : "SURVIVOR"
+	survivor : "SURVIVOR",
+	horror : 3,
+	horrorCards : [HorrorCards]
 }
 
 InfectionToken

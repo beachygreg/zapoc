@@ -55,9 +55,10 @@
                 <h3 class="panel-title">Survivors</h3>
             </div>
             <div class="panel-body" ng-repeat="player in players">
-                <p ng-bind="player.name"></p>
-                <p ng-bind="player.survivor.energy"> energy</p>
-                <p ng-bind="player.survivor.health"> health</p>
+                <p>{{player.name}}</p>
+                <p><span> {{player.survivor.energy}} of {{player.survivor.background.energy}} energy </span></p>
+                <p><span> {{player.survivor.health}} of {{player.survivor.background.health}} health </span></p>
+                <p><span> {{player.survivor.infection.length}} infection tokens </span></p>
             </div>
         </div>
     </div>
