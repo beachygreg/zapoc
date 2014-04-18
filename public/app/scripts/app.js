@@ -7,7 +7,7 @@ zapocApp.config(['$routeProvider',
   function ($routeProvider) {
     $routeProvider
       .when('/board',{
-        templateUrl: 'app/board/board.html',
+        templateUrl: 'app/views/board.html',
         controller: 'BoardController'
       })
       .otherwise({
