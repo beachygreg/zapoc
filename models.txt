@@ -10,7 +10,7 @@ Player
 {
 	name : "Q-Dawg",
 	role : "ZOMBIE_MASTER",
-	survior: [Survivor]
+	survivor: Survivor
 }
 
 Survivor
@@ -20,7 +20,7 @@ Survivor
 	health : 4,
 	loot : [Loot],
 	infection : [InfectionToken],
-	bleeding : false,
+	bleeding : false
 }
 
 Background

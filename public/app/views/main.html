@@ -1,4 +1,4 @@
-<div class="container" ng-controller="ChatController">
+<div class="container">
 
     <!--this is the players actions window-->
     <div class="col-md-2">
@@ -30,7 +30,7 @@
         <!--this is the chat window-->
         <div class="row" style="max-height: 20%;">
             <div class="col-md-12">
-                <div class="panel panel-default">
+                <div class="panel panel-default" ng-controller="ChatController">
                     <div class="panel-body">
                         <div ng-repeat="msg in messages">
                           <span ng-show="!msg.system">
@@ -47,17 +47,17 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <div class="col-md-2">
-        <div class="panel panel-default">
+        <div class="panel panel-default" ng-controller="SurvivorSidebarController">
             <div class="panel-heading">
-                <h3 class="panel-title">All Players</h3>
+                <h3 class="panel-title">Survivors</h3>
             </div>
-            <div class="panel-body">
-                <div ng-repeat="player in players">{{ player }}</div>
+            <div class="panel-body" ng-repeat="player in players">
+                <p ng-bind="player.name"></p>
+                <p ng-bind="player.survivor.energy"> energy</p>
+                <p ng-bind="player.survivor.health"> health</p>
             </div>
         </div>
     </div>
