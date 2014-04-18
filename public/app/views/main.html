@@ -54,7 +54,7 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Survivors</h3>
             </div>
-            <div class="panel-body" ng-repeat="player in players">
+            <div class="panel-body" ng-repeat="player in players.filter(isPlayerASurvivor)">
                 <p>{{player.name}}</p>
                 <p><span> {{player.survivor.energy}} of {{player.survivor.background.energy}} energy </span></p>
                 <p><span> {{player.survivor.health}} of {{player.survivor.background.health}} health </span></p>

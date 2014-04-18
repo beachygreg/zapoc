@@ -1,5 +1,17 @@
 zapocApp.controller('SurvivorSidebarController', ['$scope', function ($scope) {
 
+    $scope.isPlayerASurvivor = function(player) {
+        return player.role == "SURVIVOR";
+    }
+
+    $scope.isPlayerTheZombieMaster = function(player) {
+        return player.role == "ZOMBIE_MASTER";
+    }
+
+//    $scope.getInfectionLevel = function(player) {
+
+//    }
+
     $scope.players = [
         {
             "name": "Dave",
