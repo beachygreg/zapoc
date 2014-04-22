@@ -8,6 +8,7 @@ zapocApp.controller('ChatController', [
     $scope.chatConnected = false;
     $scope.nickName = $localStorage.get('nickName');
 
+
     if ($localStorage.get('playerUuid')) {
       $scope.playerUuid = $localStorage.get('playerUuid');
       socketService.emit('startChat', { nickName: $scope.nickName, playerUuid: $scope.playerUuid });

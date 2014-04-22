@@ -1,4 +1,5 @@
-<div class="container">
+<div class="container" >
+
 
     <!--this is the players actions window-->
     <div class="col-md-2">
@@ -37,29 +38,31 @@
                             <span style="color: red;" ng-bind="msg.nickName"></span>:
                             <span style="color: blue;" ng-bind="msg.message"></span>
                           </span>
-                          <span ng-show="msg.system" style="color: green;">{{msg.nickName || 'server:'}} {{msg.message}}</span>
+                            <span ng-show="msg.system" style="color: green;">{{msg.nickName || 'server:'}} {{msg.message}}</span>
                         </div>
-                        <input ng-show="!chatConnected" type="text" ng-model="nickName" placeholder="Nickname" ng-keypress="onEnter($event, connectChat)">
+                        <input ng-show="!chatConnected" type="text" ng-model="nickName" placeholder="Nickname"
+                               ng-keypress="onEnter($event, connectChat)">
                         <button ng-show="!chatConnected" type="button" ng-click="connectChat()">Connect</button>
-                        <input ng-show="chatConnected" type="text" ng-model="chatText" ng-keypress="onEnter($event, sendChatMessage)" style="width: 80%;">
-                        <button ng-show="chatConnected" type="button" ng-click="disconnectChat()" style="width: 18%;">Disconnect</button>
+                        <input ng-show="chatConnected" type="text" ng-model="chatText"
+                               ng-keypress="onEnter($event, sendChatMessage)" style="width: 80%;">
+                        <button ng-show="chatConnected" type="button" ng-click="disconnectChat()" style="width: 18%;">
+                            Disconnect
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-md-2">
-        <div class="panel panel-default" ng-controller="SurvivorSidebarController">
-            <div class="panel-heading">
-                <h3 class="panel-title">Survivors</h3>
-            </div>
-            <div class="panel-body" ng-repeat="player in players.filter(isPlayerASurvivor)">
-                <p>{{player.name}}</p>
-                <p><span> {{player.survivor.energy}} of {{player.survivor.background.energy}} energy </span></p>
-                <p><span> {{player.survivor.health}} of {{player.survivor.background.health}} health </span></p>
-                <p><span> {{player.survivor.infection.length}} infection tokens </span></p>
-            </div>
+    <div class="col-md-2"  ng-controller="SurvivorSidebarController">
+        <div class="panel panel-default"  ng-repeat="player in players.filter(isPlayerASurvivor)">
+            <div class="panel-heading">{{player.name}}</div>
+
+            <div class="panel-body"> {{player.survivor.energy}} of {{player.survivor.background.energy}} energy<br/>
+            {{player.survivor.health}} of {{player.survivor.background.health}} health<br/>
+             {{player.survivor.infection.length}} infection tokens <br/></div>
+
         </div>
     </div>
+</div>
 </div>

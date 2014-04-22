@@ -4,7 +4,6 @@
 zapocApp.controller('MainController', ['$scope', 'socketService',
   function ($scope,socketService) {
 
-
     $scope.sayHello = function(){
       socketService.emit('say:hi', {
           hi: "what is up!!"
