@@ -55,7 +55,7 @@
     </div>
 
     <div class="col-md-2"  ng-controller="SurvivorSidebarController">
-        <div class="panel panel-default"  ng-repeat="player in players.filter(isPlayerASurvivor)">
+        <div class="panel panel-default"  ng-repeat="player in players.filter(playerService.isPlayerASurvivor)">
             <div class="panel-heading">{{player.name}}</div>
 
             <div class="panel-body"> {{player.survivor.energy}} of {{player.survivor.background.energy}} energy<br/>

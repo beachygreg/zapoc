@@ -1,16 +1,6 @@
-zapocApp.controller('SurvivorSidebarController', ['$scope', function ($scope) {
+zapocApp.controller('SurvivorSidebarController', ['$scope', 'playerService', function ($scope, playerService) {
 
-    $scope.isPlayerASurvivor = function(player) {
-        return player.role == "SURVIVOR";
-    }
-
-    $scope.isPlayerTheZombieMaster = function(player) {
-        return player.role == "ZOMBIE_MASTER";
-    }
-
-//    $scope.getInfectionLevel = function(player) {
-
-//    }
+    $scope.playerService = playerService;
 
     $scope.players = [
         {
