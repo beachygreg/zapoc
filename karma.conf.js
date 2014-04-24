@@ -32,6 +32,8 @@ module.exports = function(config) {
       'app/scripts/MainController.js',
       'app/scripts/ChatController.js',
       'app/scripts/BoardController.js',
+      'app/scripts/SurvivorSidebarController.js',
+      'app/scripts/player/PlayerService.js',
       //'app/scripts/sockets/SocketService.js',
 
       '../spec/**/*.spec.{js,coffee}'
