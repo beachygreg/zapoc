@@ -1,21 +1,10 @@
 /**
  * Created by greg on 15/04/14.
  */
+var boardControllers = angular.module('boardControllers', []);
 
-angular.module('zapocApp').controller('BoardController', ['$scope', '$http', function ($scope,$http) {
+boardControllers.controller('BoardController', ['$scope', function ($scope) {
 
-    $scope.board = {
-                    "name": "Main Board",
-                    "rooms":[
-                        {
-                            "name": "room1",
-                            "tiles":[{"columns":["0","0","0","0","0","0"]},
-                                {"columns":["0","0","0","0","0","0"]},
-                                {"columns":["0","0","0","0","0","0"]},
-                                {"columns":["0","0","0","0","0","0"]},
-                                {"columns":["0","0","0","0","0","0"]}
-                            ]
-                        }
-                    ]
-                   };
+
+
   }]);
