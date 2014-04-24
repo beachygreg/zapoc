@@ -1,13 +1,4 @@
 <div ng-controller="BoardController">
-    <div>
-        <h1>{{board.name}}</h1>
-        <div ng-repeat="room in board.rooms">
-            <p>{{room.name}}</p>
-            <div class="row" ng-repeat="row in room.tiles">
-                <div class="column" ng-repeat="column in row.columns track by $id()">
-                    <div id="$id()">O</div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
 </div>
