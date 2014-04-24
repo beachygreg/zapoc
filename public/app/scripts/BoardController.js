@@ -1,9 +1,8 @@
 /**
  * Created by greg on 15/04/14.
  */
-var boardControllers = angular.module('boardControllers', []);
 
-boardControllers.controller('BoardController', ['$scope', '$http', function ($scope,$http) {
+angular.module('zapocApp').controller('BoardController', ['$scope', '$http', function ($scope,$http) {
 
     $scope.board = {
                     "name": "Main Board",

@@ -1,7 +1,7 @@
 /**
  * Created by greg on 15/04/14.
  */
-zapocApp.factory('socketService',['$rootScope', function ($rootScope) {
+angular.module('zapocApp').factory('socketService',['$rootScope', function ($rootScope) {
   var socket = io.connect();
   return {
     on: function (eventName, callback) {

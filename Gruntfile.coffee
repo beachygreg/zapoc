@@ -4,27 +4,7 @@ module.exports = (grunt)->
     
     karma:
       options:
-        frameworks: ['jasmine']
-        basePath: 'public'
-        files: [
-          'bower_components/jquery/dist/jquery.min.js'
-          'bower_components/bootstrap/dist/js/bootstrap.min.js'
-          'bower_components/angular/angular.js'
-          'bower_components/angular-route/angular-route.js'
-          'bower_components/angular-ui/build/angular-ui.min.js'
-          'bower_components/angular-ui/build/angular-ui-ieshiv.min.js'
-          'bower_components/angular-bootstrap/ui-bootstrap.js'
-          'bower_components/angular-socket-io/socket.js'
-          'bower_components/angular-local-storage/angular-local-storage.js'
-
-          'app/scripts/**/*.js'
-
-          '../spec/**/*.spec.{js,coffee}'
-        ]
-        runnerPort: 9100
-        browsers: ['PhantomJS']
-        preprocessors:
-          '**/*.coffee': ['coffee']
+        configFile: 'karma.conf.js'
       unit:
         autoWatch: false
         singleRun: true
@@ -35,10 +15,5 @@ module.exports = (grunt)->
       watch:
         autoWatch: true
         singleRun: false
-        browsers: ['PhantomJS']
-
-
-#          vendor: [
-#          ]
 
   grunt.loadNpmTasks 'grunt-karma'

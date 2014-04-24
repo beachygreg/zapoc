@@ -1,4 +1,4 @@
-zapocApp.controller('SurvivorSidebarController', ['$scope', function ($scope) {
+angular.module('zapocApp').controller('SurvivorSidebarController', ['$scope', function ($scope) {
 
     $scope.isPlayerASurvivor = function(player) {
         return player.role == "SURVIVOR";
