@@ -3,3 +3,5 @@ idea/
 .idea/
 /public/bower_components
 node_modules/
+test-results.xml
+.grunt/

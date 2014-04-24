@@ -1,4 +1,4 @@
-zapocApp.controller('ChatController', [
+angular.module('zapocApp').controller('ChatController', [
   '$scope',
   'socketService',
   'localStorageService',

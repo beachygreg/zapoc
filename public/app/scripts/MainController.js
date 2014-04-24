@@ -1,7 +1,7 @@
 /**
  * Created by greg on 15/04/14.
  */
-zapocApp.controller('MainController', ['$scope', 'socketService',
+angular.module('zapocApp').controller('MainController', ['$scope', 'socketService',
   function ($scope,socketService) {
 
     $scope.sayHello = function(){
