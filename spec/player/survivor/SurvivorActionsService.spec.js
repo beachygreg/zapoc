@@ -7,10 +7,14 @@ describe("Survivor Actions Service", function() {
 
     it("performRestAction doesn't recover energy in excess of survivor's maximum", function() {
         var survivor = { energy: 3, background: { energy: 3 } };
+        survivorActionService.performRestAction(survivor);
+        expect(survivor.energy).toBe(3);
     });
 
     it("performRestAction recovers 1 energy in the typical case", function() {
         var survivor = { energy: 3, background: { energy: 4 } };
+        survivorActionService.performRestAction(survivor);
+        expect(survivor.energy).toBe(4);
     });
 
 });
