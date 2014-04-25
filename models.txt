@@ -19,8 +19,9 @@ Survivor
 	energy : 2,
 	health : 4,
 	loot : [Loot],
-	infection : [InfectionToken],
+	infectionTokens : [InfectionToken],
 	bleeding : false
+	turned : false
 }
 
 Background

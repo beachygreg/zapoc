@@ -34,6 +34,9 @@ module.exports = function(config) {
       'app/scripts/BoardController.js',
       'app/scripts/SurvivorSidebarController.js',
       'app/scripts/player/PlayerService.js',
+      'app/scripts/player/survivor/SurvivorService.js',
+      'app/scripts/player/survivor/SurvivorActionService.js',
+      'app/scripts/player/survivor/BackgroundService.js',
       //'app/scripts/sockets/SocketService.js',
 
       '../spec/**/*.spec.{js,coffee}'
